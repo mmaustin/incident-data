@@ -8,7 +8,7 @@ export default function Home() {
   console.log(n);
   
   return (
-    <div className="bg-amber-100 uppercase h-screen">
+    <div className="bg-amber-200 uppercase h-screen">
      up and running???
     </div>
   );
