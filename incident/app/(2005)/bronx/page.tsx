@@ -1,9 +1,9 @@
 
 
 
-const BronxIncidentPlots = () => {
+const BronxIncidentsPlots = () => {
   return (
-    <div>BronxIncidentPlots</div>
+    <div>BronxIncidentsPlots</div>
   )
 }
-export default BronxIncidentPlots;
+export default BronxIncidentsPlots;
