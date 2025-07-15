@@ -16,4 +16,4 @@ export const incidentData = async(): Promise<string> => {
 
   return "There was an error while fetching the data.";
 
-}
+};
