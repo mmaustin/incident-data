@@ -1,11 +1,15 @@
 'use client'
 
-import { useNumber } from "@/providers/objectProvider";
+// import { incidentData } from "@/utils/actions";
+// import { use } from "react";
 
 export default function Home() {
 
-  const n = useNumber();
-  console.log(n);
+  // const data = incidentData();
+  // const incidents = use(data);
+  // const parsedIncidents = JSON.parse(incidents);
+  // console.log(parsedIncidents.length);
+  
   
   return (
     <div className="bg-amber-200 uppercase h-screen">

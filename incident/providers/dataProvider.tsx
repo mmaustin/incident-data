@@ -4,7 +4,7 @@
 import { incidentData } from "@/utils/actions";
 import { createContext, ReactNode, useContext, use } from "react";
 
-
+// Error: Server Functions cannot be called during initial render.
 const DataContext = createContext("Awaiting Stringified Data");
 
 const DataContextProvider = ({children}: {children:ReactNode}) => {
