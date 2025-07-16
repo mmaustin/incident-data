@@ -1,7 +1,15 @@
-'use client';
+//'use client';
 
+import { incidentData } from "@/utils/actions";
+//import { use } from "react";
 
-const BrooklynIncidentsPlots = () => {
+const BrooklynIncidentsPlots = async() => {
+
+  const d = await incidentData();
+  const dd: object[] = JSON.parse(d);
+  console.log(dd.slice(400,409));
+  
+  
 
   return (
     <div>BrooklynIncidentsPlots</div>
