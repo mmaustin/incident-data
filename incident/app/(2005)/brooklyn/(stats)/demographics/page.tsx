@@ -1,11 +1,10 @@
-'use client'
+import { incidentData } from "@/utils/actions";
 
-// import { useData } from "@/providers/dataProvider";
+//import { useData } from "@/providers/dataProvider";
 
+const BrooklynDemographics = async() => {
 
-const BrooklynDemographics = () => {
-
-  // const data = useData();
+  const data = await incidentData();
   // const parsedData: object[] = JSON.parse(data);
   // console.log(data);
   
