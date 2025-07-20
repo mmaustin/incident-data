@@ -1,4 +1,7 @@
-
+type GeocodedColumn = {
+  type?: string,
+  coordinates?: number[]
+};
 
 export type incidentOccurrenceType = {
   "incident_key"?: string,
@@ -21,10 +24,7 @@ export type incidentOccurrenceType = {
   "y_coord_cd"?: string,
   "latitude"?: string,
   "longitude"?: string,
-  "geocoded_column"?: {
-    "type": string,
-    "coordinates": [number, number]
-  },
+  "geocoded_column"?: GeocodedColumn,
   ":@computed_region_yeji_bk3q"?: string,
   ":@computed_region_92fq_4b7q"?: string,
   ":@computed_region_sbqj_enih"?: string,

@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //'use client';
 
+import { useBrooklynData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
 
 //import { incidentData } from "@/utils/actions";
 //import { use } from "react";
-import {incidentOccurrenceType} from '@/types/incidentType'
+import {incidentOccurrenceType} from '@/types/incidentType';
 
 const BrooklynIncidentsPlots = () => {
 
@@ -13,6 +14,8 @@ const BrooklynIncidentsPlots = () => {
   // const dd: object[] = JSON.parse(d);
   // console.log(dd.slice(400,409));
   
+  const brooklynData = useBrooklynData(incidentArray);
+  console.log(brooklynData.slice(0,9));
   
 
   return (

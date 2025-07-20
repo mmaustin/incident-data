@@ -1,6 +1,6 @@
 import { incidentOccurrenceType } from '@/types/incidentType';
 
-export const useBrooklynData = (data: [incidentOccurrenceType]): Array<incidentOccurrenceType> => {
+export const useBrooklynData = (data: Array<incidentOccurrenceType>): Array<incidentOccurrenceType> => {
   const filteredData = data.map(incident => {
     if(incident.boro === 'BROOKLYN'){
       return incident;
