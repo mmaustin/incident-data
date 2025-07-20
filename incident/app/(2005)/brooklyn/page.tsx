@@ -15,7 +15,7 @@ const BrooklynIncidentsPlots = () => {
   // console.log(dd.slice(400,409));
   
   const brooklynData = useBrooklynData(incidentArray);
-  console.log(brooklynData.slice(0,9));
+  console.log(brooklynData);
   
 
   return (

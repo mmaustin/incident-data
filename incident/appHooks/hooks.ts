@@ -5,6 +5,7 @@ export const useBrooklynData = (data: Array<incidentOccurrenceType>): Array<inci
     if(incident.boro === 'BROOKLYN'){
       return incident;
     };
-  });
+  }
+);
   return filteredData as [incidentOccurrenceType];
 };
