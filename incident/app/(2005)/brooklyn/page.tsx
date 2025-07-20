@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 //'use client';
+
+import incidentArray from "@/incidentData/incidentArray";
 
 //import { incidentData } from "@/utils/actions";
 //import { use } from "react";
+import {incidentOccurrenceType} from '@/types/incidentType'
 
-const BrooklynIncidentsPlots = async() => {
+const BrooklynIncidentsPlots = () => {
 
   // const d = await incidentData();
   // const dd: object[] = JSON.parse(d);

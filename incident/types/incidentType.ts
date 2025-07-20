@@ -1,6 +1,6 @@
 
 
-type incidentOccurrenceType = {
+export type incidentOccurrenceType = {
   "incident_key"?: string,
   "occur_date"?: string,
   "occur_time"?: string,
@@ -32,4 +32,4 @@ type incidentOccurrenceType = {
   ":@computed_region_f5dn_yrer"?: string  
 };
 
-export default incidentOccurrenceType;
+//export default incidentOccurrenceType;
