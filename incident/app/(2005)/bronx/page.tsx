@@ -4,8 +4,8 @@ import incidentArray from "@/incidentData/incidentArray";
 
 const BronxIncidentsPlots = () => {
 
-  const brooklynData = useBronxData(incidentArray);
-  console.log(brooklynData);
+  const bronxData = useBronxData(incidentArray);
+  console.log(bronxData);
 
   return (
     <div>BronxIncidentsPlots</div>
