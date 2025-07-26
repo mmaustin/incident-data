@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useManhattanData } from "@/appHooks/hooks";
+import { useUniversalData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
 
 
 const ManhattanIncidentsPlots = () => {
 
-  const manhattanData = useManhattanData(incidentArray);
+  const manhattanData = useUniversalData("MANHATTAN", incidentArray);
 
   return (
     <div>ManhattanIncidentsPlots</div>

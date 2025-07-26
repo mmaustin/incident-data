@@ -49,7 +49,7 @@ export const useQueensData = (data: Array<incidentOccurrenceType>): Array<incide
   return filteredData as [incidentOccurrenceType];
 };
 
-export const universalData = (type: boroughInput, data: Array<incidentOccurrenceType>): Array<incidentOccurrenceType> => {
+export const useUniversalData = (type: boroughInput, data: Array<incidentOccurrenceType>): Array<incidentOccurrenceType> => {
   const filteredData = data.map(incident => {
     if (incident.boro === type) {
       return incident;

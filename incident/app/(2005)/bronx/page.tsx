@@ -1,11 +1,12 @@
-import { useBronxData } from "@/appHooks/hooks";
+///* eslint-disable @typescript-eslint/no-unused-vars */
+import { useUniversalData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
 
 
 const BronxIncidentsPlots = () => {
 
-  const bronxData = useBronxData(incidentArray);
-  console.log(bronxData);
+  const bronxData = useUniversalData("BRONX", incidentArray)
+  console.log(bronxData.length);
 
   return (
     <div>BronxIncidentsPlots</div>

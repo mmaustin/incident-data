@@ -1,12 +1,12 @@
 ///* eslint-disable @typescript-eslint/no-unused-vars */
 //'use client';
 
-import { useBrooklynData } from "@/appHooks/hooks";
+import { useUniversalData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
 
 const BrooklynIncidentsPlots = () => {
   
-  const brooklynData = useBrooklynData(incidentArray);
+  const brooklynData = useUniversalData("BROOKLYN", incidentArray);
   console.log(brooklynData);
   
 
