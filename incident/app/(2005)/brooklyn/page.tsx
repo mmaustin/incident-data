@@ -1,10 +1,14 @@
 ///* eslint-disable @typescript-eslint/no-unused-vars */
-//'use client';
+'use client';
 
 import { useUniversalData } from "@/appHooks/hooks";
-import IncidentMapTemplate from "@/components/IncidentMapTemplate";
 import incidentArray from "@/incidentData/incidentArray";
+import dynamic from "next/dynamic";
 
+const MapProperty = dynamic(
+  () => import('@/components/IncidentMapTemplate'),
+  { ssr: false }
+);
 
 const BrooklynIncidentsPlots = () => {
   
@@ -21,7 +25,7 @@ const BrooklynIncidentsPlots = () => {
   
   return (
     <>
-      <IncidentMapTemplate  data={slicedData} />
+      <MapProperty  data={slicedData} />
     </>
   )
 }
