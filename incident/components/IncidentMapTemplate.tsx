@@ -10,8 +10,13 @@ const markerIcon = icon({
   iconUrl: iconUrl,
   iconSize: [10, 15],
 });
+type SlicedDataType = {
+  data: Array<[number, number] | undefined>
+}
 
-const IncidentMapTemplate = () => {
+const IncidentMapTemplate = (data: SlicedDataType) => {
+  console.log(data);
+  
   return (
     <div className="mt-4">
       <MapContainer center={[40.695051, -73.917793]} zoom={7} scrollWheelZoom={false} zoomControl={false} className='h-[400px] w-[50%] z-0 rounded-lg relative'>

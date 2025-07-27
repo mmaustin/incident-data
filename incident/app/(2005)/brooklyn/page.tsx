@@ -2,7 +2,9 @@
 //'use client';
 
 import { useUniversalData } from "@/appHooks/hooks";
+import IncidentMapTemplate from "@/components/IncidentMapTemplate";
 import incidentArray from "@/incidentData/incidentArray";
+
 
 const BrooklynIncidentsPlots = () => {
   
@@ -15,12 +17,12 @@ const BrooklynIncidentsPlots = () => {
     };
   });
 
-  console.log(slicedData);
+  //console.log(slicedData);
   
-  
-
   return (
-    <div className="h-screen">BrooklynIncidentsPlots</div>
+    <>
+      <IncidentMapTemplate  data={slicedData} />
+    </>
   )
 }
 export default BrooklynIncidentsPlots;
