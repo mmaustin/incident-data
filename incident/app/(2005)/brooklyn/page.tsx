@@ -15,7 +15,7 @@ const BrooklynIncidentsPlots = () => {
   const brooklynData = useUniversalData("BROOKLYN", incidentArray);
   const bd = brooklynData.slice(0,9);
 
-  const slicedData: Array<[number, number]|undefined> = bd.map((data) => {
+  const slicedData: Array<[number, number]> = bd.map((data) => {
     return [Number(data.latitude), Number(data.longitude)] as [number, number];
   });
   
