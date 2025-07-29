@@ -16,14 +16,8 @@ const BrooklynIncidentsPlots = () => {
   const bd = brooklynData.slice(0,9);
 
   const slicedData: Array<[number, number]|undefined> = bd.map((data) => {
-    if(data){
-      return [Number(data.latitude), Number(data.longitude)] as [number, number];
-    };
+    return [Number(data.latitude), Number(data.longitude)] as [number, number];
   });
-
-  // const d = bd.filter(d => !!d === true)
-
-  // console.log(d);
   
   return (
     <>
