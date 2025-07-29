@@ -3,7 +3,7 @@ type GeocodedColumn = {
   coordinates?: number[]
 };
 
-export type incidentOccurrenceType = {
+export type IncidentOccurrenceType = {
   "incident_key"?: string,
   "occur_date"?: string,
   "occur_time"?: string,

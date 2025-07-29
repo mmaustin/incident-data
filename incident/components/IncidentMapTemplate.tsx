@@ -15,7 +15,7 @@ type SlicedDataType = {
 }
 
 const IncidentMapTemplate = (data: SlicedDataType) => {
-  console.log(data);
+  console.log(typeof data);
 
   const position = [
     [40.695051, -73.917793] as [number, number],
