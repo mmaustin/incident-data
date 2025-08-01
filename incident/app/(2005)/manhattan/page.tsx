@@ -1,14 +1,28 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+///* eslint-disable @typescript-eslint/no-unused-vars */
+'use client';
+
 import { useUniversalData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
+import dynamic from "next/dynamic";
 
+const MapProperty = dynamic(
+  () => import('@/components/IncidentMapTemplate'),
+  { ssr: false }
+);
 
 const ManhattanIncidentsPlots = () => {
 
   const manhattanData = useUniversalData("MANHATTAN", incidentArray);
+  //const bdTemporary = brooklynData.slice(0,9);
+
+  const slicedData: Array<[number, number]> = manhattanData.map((data) => {
+    return [Number(data.latitude), Number(data.longitude)] as [number, number];
+  });
 
   return (
-    <div>ManhattanIncidentsPlots</div>
+    <>
+      <MapProperty data={slicedData} />
+    </>
   )
 }
 export default ManhattanIncidentsPlots;
