@@ -18,7 +18,7 @@ const IncidentMapTemplate = ({data}: {data: [number, number][]}) => {
   
   return (
     <div className="mt-4">
-      <MapContainer center={data[0]} zoom={7} scrollWheelZoom={false} zoomControl={false} className='h-[400px] w-[50%] z-0 rounded-lg relative'>
+      <MapContainer center={data[0]} zoom={7} scrollWheelZoom={false} zoomControl={false} className='h-screen w-[100%] z-0 rounded-lg relative'>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
