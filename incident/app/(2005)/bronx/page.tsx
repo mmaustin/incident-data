@@ -13,10 +13,10 @@ const MapProperty = dynamic(
 
 const BronxIncidentsPlots = () => {
 
-  const brooklynData = useUniversalData("BRONX", incidentArray);
-  const bdTemporary = brooklynData.slice(0, 9);
+  const bronxData = useUniversalData("BRONX", incidentArray);
+  //const bdTemporary = brooklynData.slice(0, 9);
 
-  const slicedData: Array<[number, number]> = bdTemporary.map((data) => {
+  const slicedData: Array<[number, number]> = bronxData.map((data) => {
     return [Number(data.latitude), Number(data.longitude)] as [number, number];
   });
 

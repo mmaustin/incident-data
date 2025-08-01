@@ -13,8 +13,9 @@ const MapProperty = dynamic(
 const BrooklynIncidentsPlots = () => {
   
   const brooklynData = useUniversalData("BROOKLYN", incidentArray);
-  const bdTemporary = brooklynData.slice(0,9);
-  const slicedData: Array<[number, number]> = bdTemporary.map((data) => {
+  //const bdTemporary = brooklynData.slice(0,9);
+
+  const slicedData: Array<[number, number]> = brooklynData.map((data) => {
     return [Number(data.latitude), Number(data.longitude)] as [number, number];
   });
   
