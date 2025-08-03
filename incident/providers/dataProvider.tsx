@@ -11,6 +11,8 @@ const DataContextProvider = ({children}: {children:ReactNode}) => {
 
   const data = incidentData();
   const unwrappedData = use(data);
+  console.log(unwrappedData.length);
+  
 
   return (
     <DataContext value={unwrappedData}>

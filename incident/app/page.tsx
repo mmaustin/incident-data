@@ -1,15 +1,14 @@
-'use client'
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
-// import { incidentData } from "@/utils/actions";
-// import { use } from "react";
+import DataProvider from "@/components/clientProvider/DataProvider";
+import { incidentData } from "@/utils/actions";
 
-export default function Home() {
 
-  // const data = incidentData();
-  // const incidents = use(data);
-  // const parsedIncidents = JSON.parse(incidents);
-  // console.log(parsedIncidents.length);
-  
+export default async function Home() {
+
+  const data = incidentData();
+  console.log(typeof data);
+
   
   return (
     <div className="bg-amber-200 uppercase h-screen">
