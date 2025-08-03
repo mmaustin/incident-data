@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'leaflet/dist/leaflet.css';
-//import DataContextProvider from "@/providers/dataProvider";
+// import DataContextProvider from "@/providers/dataProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+
 }: Readonly<{
   children: React.ReactNode;
 }>) {
