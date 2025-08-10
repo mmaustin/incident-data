@@ -28,10 +28,10 @@ const IncidentMapTemplate = ({data}: {data: Array<DataReturn>}) => {
         {data.map((obj, i) => (
         <Marker key={i} position={obj.coordinates} icon={markerIcon}>
           <Popup>
-            {obj.ageGroup} <br />
-            {obj.murderOutcome} <br />
-            {obj.race} <br />
-            {obj.sex} <br />
+            Age Group: {obj.ageGroup} <br />
+            Murdered: {obj.murderOutcome} <br />
+            Color/Eth: {obj.race} <br />
+            Sex: {obj.sex} <br />
           </Popup>
         </Marker>
       ))}
