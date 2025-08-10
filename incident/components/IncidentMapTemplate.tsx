@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { MapContainer, TileLayer, Marker, ZoomControl } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, ZoomControl, Popup } from 'react-leaflet';
 //import {FaAccusoft} from "react-icons/fa"
 import { icon } from 'leaflet';
 import { DataReturn } from "@/types/dataTypes";
@@ -26,7 +26,14 @@ const IncidentMapTemplate = ({data}: {data: Array<DataReturn>}) => {
         />
         <ZoomControl position='bottomright' />
         {data.map((obj, i) => (
-        <Marker key={i} position={obj.coordinates} icon={markerIcon}></Marker>
+        <Marker key={i} position={obj.coordinates} icon={markerIcon}>
+          <Popup>
+            {obj.ageGroup} <br />
+            {obj.murderOutcome} <br />
+            {obj.race} <br />
+            {obj.sex} <br />
+          </Popup>
+        </Marker>
       ))}
       </MapContainer>
 
