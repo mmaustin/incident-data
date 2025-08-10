@@ -4,19 +4,14 @@
 import { useUniversalData } from "@/appHooks/hooks";
 import incidentArray from "@/incidentData/incidentArray";
 import dynamic from "next/dynamic";
+import { DataReturn } from "@/types/dataTypes";
 
 const MapProperty = dynamic(
   () => import('@/components/IncidentMapTemplate'),
   { ssr: false }
 );
 
-type DataReturn = {
-  coordinates?: [number, number],
-  murderOutcome?: string,
-  ageGroup?: string,
-  race?: string,
-  sex?: string
-}
+
 
 const BrooklynIncidentsPlots = () => {
   
