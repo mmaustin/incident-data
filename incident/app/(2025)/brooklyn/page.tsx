@@ -1,4 +1,4 @@
-///* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { useUniversalData } from "@/appHooks/hooks";
@@ -9,6 +9,14 @@ const MapProperty = dynamic(
   () => import('@/components/IncidentMapTemplate'),
   { ssr: false }
 );
+
+type DataReturn = {
+  coordinates: [number, number],
+  murderOutcome: string,
+  ageGroup: string,
+  race: string,
+  sex: string
+}
 
 const BrooklynIncidentsPlots = () => {
   
