@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { MapContainer, TileLayer, Marker, ZoomControl } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, ZoomControl, Popup } from 'react-leaflet';
 //import {FaAccusoft} from "react-icons/fa"
 import { icon } from 'leaflet';
 const iconUrl =
@@ -17,7 +17,7 @@ type SlicedDataType = {
 const IncidentMapTemplate = ({data}: {data: [number, number][]}) => {
   
   return (
-    <div className="mt-4">
+    <div className="mt-4 bg-amber-400">
       <MapContainer center={data[0]} zoom={7} scrollWheelZoom={false} zoomControl={false} className='h-screen w-[100%] z-0 rounded-lg relative'>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -28,7 +28,6 @@ const IncidentMapTemplate = ({data}: {data: [number, number][]}) => {
         <Marker key={i} position={posit} icon={markerIcon}></Marker>
       ))}
       </MapContainer>
-
     </div>
   )
 }
