@@ -14,12 +14,10 @@ const MapProperty = dynamic(
 
 
 const BrooklynIncidentsPlots = () => {
-  
+
   const brooklynData = useUniversalData("BROOKLYN", incidentArray);
-  //const bdTemporary = brooklynData.slice(0,9);
 
   const slicedData: Array<DataReturn> = brooklynData.map((data) => {
-    //return [Number(data.latitude), Number(data.longitude)] as [number, number];
     return {
       coordinates: [Number(data.latitude), Number(data.longitude)] as [number, number],
       murderOutcome: data.statistical_murder_flag,
@@ -28,7 +26,7 @@ const BrooklynIncidentsPlots = () => {
       sex: data.vic_sex,
     }
   });
-  
+
   return (
     <>
       <MapProperty data={slicedData} />
