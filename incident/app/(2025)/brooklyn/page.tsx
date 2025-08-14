@@ -12,7 +12,6 @@ const MapProperty = dynamic(
 );
 
 
-
 const BrooklynIncidentsPlots = () => {
 
   const brooklynData = useUniversalData("BROOKLYN", incidentArray);
