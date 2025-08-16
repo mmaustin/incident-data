@@ -3,21 +3,7 @@
 
 import incidentArray from "@/incidentData/incidentArray";
 
-// import DataProvider from "@/components/clientProvider/DataProvider";
-//import { incidentData } from "@/utils/actions";
-// import { ReactNode } from "react";
-
 export default async function Home() {
-//   const mapIt = () => {
-//     data.map(d => {
-//         if(holder.has(d.vic_age_group)){
-//             holder.set(d.vic_age_group, holder.get(d.vic_age_group)+1)
-//         } else {
-//             holder.set(d.vic_age_group, 1);
-//         }
-//     });
-//     console.log(holder)
-// };
 
   const mappedData = new Map();
   
