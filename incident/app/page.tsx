@@ -3,6 +3,22 @@
 
 import incidentArray from "@/incidentData/incidentArray";
 
+// Map(6) {
+//   '45-64' => 47,
+//   '18-24' => 109,
+//   '25-44' => 220,
+//   '<18' => 58,
+//   '65+' => 4,
+//   'UNKNOWN' => 1
+// }
+
+type DataIncidentType = {
+  name: string,
+  incidents: number
+}
+
+type ChartDataIncidentType = Array<DataIncidentType>;
+
 export default async function Home() {
 
   const mappedData = new Map<string, number>();
