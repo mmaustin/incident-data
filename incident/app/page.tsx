@@ -12,16 +12,17 @@ import incidentArray from "@/incidentData/incidentArray";
 //   'UNKNOWN' => 1
 // }
 
-type DataIncidentType = {
-  name: string,
-  incidents: number
-}
+type DataIncidentType = 
+  {name: string, incidents: number}
+
 
 type ChartDataIncidentType = Array<DataIncidentType>;
 
 export default async function Home() {
 
   const mappedData = new Map<string, number>();
+
+  const arr: DataIncidentType[] = [];
   
   const mappedDataMaker = (): Map<string, number> => {
     
@@ -32,10 +33,17 @@ export default async function Home() {
         mappedData.set(d.vic_age_group, 1);
       }
     });
+    for(const [key, value] of mappedData){
+      arr.push({name: key, incidents: value});
+    }
+    
     return mappedData;
     
   };
-  console.log(mappedDataMaker());
+  mappedDataMaker();
+
+  console.log(arr);
+  
   
   return (
     <div className="bg-amber-200 uppercase h-screen flex flex-col justify-center items-center">
