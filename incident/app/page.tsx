@@ -5,6 +5,7 @@
 import incidentArray from "@/incidentData/incidentArray";
 import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
+
 // Map(6) {
 //   '45-64' => 47,
 //   '18-24' => 109,
@@ -13,6 +14,7 @@ import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 //   '65+' => 4,
 //   'UNKNOWN' => 1
 // }
+
 
 const data01 = [
   { name: 'Group A', value: 400 },
@@ -23,13 +25,12 @@ const data01 = [
   { name: 'Group F', value: 189 },
 ];
 
-type DataIncidentType =
-  { name: string, incidents: number }
+type DataIncidentType = { name: string, incidents: number };
 
 
 type ChartDataIncidentType = Array<DataIncidentType>;
 
-export default function Home() {
+export default function Home() {  
 
   const mappedData = new Map<string, number>();
 

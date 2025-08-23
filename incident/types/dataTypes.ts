@@ -5,3 +5,5 @@ export type DataReturn = {
   race: string,
   sex: string
 };
+
+export type DataIncidentType = { name: string, incidents: number };
