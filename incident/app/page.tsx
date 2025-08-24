@@ -35,9 +35,9 @@ export default function Home() {
   const mappedData = new Map<string, number>();
 
   const arr: DataIncidentType[] = [];
-
-  const mappedDataMaker = (): void => {
-
+  
+  const mappedDataMaker = (): DataIncidentType[] => {
+    
     incidentArray.map(d => {
       if (mappedData.has(d.vic_age_group)) {
         mappedData.set(d.vic_age_group, mappedData.get(d.vic_age_group) as number + 1);
@@ -48,6 +48,8 @@ export default function Home() {
     for (const [key, value] of mappedData) {
       arr.push({ name: key, incidents: value });
     };
+
+    return arr;
 
   };
   mappedDataMaker();
