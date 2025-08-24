@@ -1,6 +1,5 @@
 import { IncidentOccurrenceType } from '@/types/incidentType';
 import { boroughInput } from '@/types/boroughType';
-import incidentArray from '@/incidentData/incidentArray';
 import { DataIncidentType } from '@/types/dataTypes';
 
 export const useBrooklynData = (data: Array<IncidentOccurrenceType>): Array<IncidentOccurrenceType> => {
@@ -57,17 +56,17 @@ export const useUniversalData = (type: boroughInput, data: Array<IncidentOccurre
   return filteredData as [IncidentOccurrenceType];
 };
 
-export const useRechartsDataMaker = (): Array<DataIncidentType> => {
+export const useRechartsDataMaker = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
 
   const mappedData = new Map<string, number>();
 
   const arr: DataIncidentType[] = [];
 
-  incidentArray.map(d => {
-    if (mappedData.has(d.vic_age_group)) {
-      mappedData.set(d.vic_age_group, mappedData.get(d.vic_age_group) as number + 1);
+  boroughData.map(dataSet => {
+    if (mappedData.has(dataSet.vic_age_group)) {
+      mappedData.set(dataSet.vic_age_group, mappedData.get(dataSet.vic_age_group) as number + 1);
     } else {
-      mappedData.set(d.vic_age_group, 1);
+      mappedData.set(dataSet.vic_age_group, 1);
     }
   });
 
