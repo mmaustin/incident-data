@@ -4,15 +4,14 @@ import incidentArray from '@/incidentData/incidentArray';
 import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 
-const DemoChartDisplay = () => {
+const ChartDisplay = () => {
 
   const boroughData = useUniversalData("BROOKLYN", incidentArray);
   const dataArray = useRechartsDataMaker(boroughData);
 
   return (
-    <div className="h-[500px] w-full flex flex-col justify-center items-center border-2 border-amber-300">
-      <p>what the what</p>
-      <ResponsiveContainer width='100%' height={300} className='mx-4 border-2'>
+    <div className="h-[500px] w-full flex flex-col justify-center items-center">
+      <ResponsiveContainer width='100%' height={300} className='mx-4'>
         <PieChart >
           <Pie
             dataKey="incidents"
@@ -30,4 +29,4 @@ const DemoChartDisplay = () => {
     </div>
   )
 }
-export default DemoChartDisplay;
+export default ChartDisplay;
