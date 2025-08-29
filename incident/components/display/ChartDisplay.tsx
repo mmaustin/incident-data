@@ -2,11 +2,12 @@
 import { useRechartsDataMaker, useUniversalData } from '@/appHooks/hooks';
 import incidentArray from '@/incidentData/incidentArray';
 import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { boroughInput } from '@/types/boroughType';
 
 
-const ChartDisplay = () => {
+const ChartDisplay = ({borough}: {borough: boroughInput}) => {
 
-  const boroughData = useUniversalData("BROOKLYN", incidentArray);
+  const boroughData = useUniversalData(borough, incidentArray);
   const dataArray = useRechartsDataMaker(boroughData);
 
   return (

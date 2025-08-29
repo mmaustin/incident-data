@@ -4,7 +4,7 @@ import ChartDisplay from "@/components/display/ChartDisplay";
 
 const BrooklynAges = () => {
   return (
-    <ChartDisplay />
+    <ChartDisplay borough={"BROOKLYN"}/>
   )
 }
 export default BrooklynAges;
