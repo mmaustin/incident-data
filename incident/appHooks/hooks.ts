@@ -76,3 +76,24 @@ export const useRechartsDataMaker = (boroughData: Array<IncidentOccurrenceType>)
 
   return arr;
 };
+
+export const useRechartsDataMakerMurder = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
+
+  const mappedData = new Map<string, number>();
+
+  const arr: DataIncidentType[] = [];
+
+  boroughData.map(dataSet => {
+    if (mappedData.has(dataSet.statistical_murder_flag)) {
+      mappedData.set(dataSet.statistical_murder_flag, mappedData.get(dataSet.statistical_murder_flag) as number + 1);
+    } else {
+      mappedData.set(dataSet.statistical_murder_flag, 1);
+    }
+  });
+
+  for (const [key, value] of mappedData) {
+    arr.push({ name: key, incidents: value });
+  };
+
+  return arr;
+};
