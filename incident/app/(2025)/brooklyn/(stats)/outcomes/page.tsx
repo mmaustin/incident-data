@@ -1,6 +1,4 @@
-
 import ChartDisplayMurder from "@/components/display/ChartDisplayMurder";
-
 
 const BrooklynOutcomes = () => {
   return (

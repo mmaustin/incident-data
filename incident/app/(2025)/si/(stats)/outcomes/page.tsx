@@ -1,9 +1,8 @@
-
-
+import ChartDisplayMurder from "@/components/display/ChartDisplayMurder";
 
 const StatenIslandOutcomes = () => {
   return (
-    <div>StatenIslandOutcomes</div>
+    <ChartDisplayMurder borough={"STATEN ISLAND"} />
   )
 }
 export default StatenIslandOutcomes;
