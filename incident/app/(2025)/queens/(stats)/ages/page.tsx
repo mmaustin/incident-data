@@ -1,9 +1,9 @@
 
-
+import ChartDisplay from "@/components/display/ChartDisplay";
 
 const QueensAges = () => {
   return (
-    <div>QueensAges</div>
+    <ChartDisplay borough={"QUEENS"} />
   )
 }
 export default QueensAges;

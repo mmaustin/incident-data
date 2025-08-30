@@ -1,9 +1,9 @@
 
-
+import ChartDisplay from "@/components/display/ChartDisplay";
 
 const ManhattanAges = () => {
   return (
-    <div>ManhattanAges</div>
+    <ChartDisplay borough={"MANHATTAN"} />
   )
 }
 export default ManhattanAges;
