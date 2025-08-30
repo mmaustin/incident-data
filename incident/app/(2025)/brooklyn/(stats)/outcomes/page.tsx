@@ -1,9 +1,10 @@
 
+import ChartDisplayMurder from "@/components/display/ChartDisplayMurder";
 
 
 const BrooklynOutcomes = () => {
   return (
-    <div>BrooklynOutcomes</div>
+    <ChartDisplayMurder borough={"BROOKLYN"} />
   )
 }
 export default BrooklynOutcomes;
