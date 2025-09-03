@@ -58,19 +58,19 @@ export const useUniversalData = (type: boroughInput, data: Array<IncidentOccurre
 
 export const useRechartsDataMaker = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
 
-  const mappedData = new Map<string, number>();
+  const mappedDataOne = new Map<string, number>();
 
   const arr: DataIncidentType[] = [];
 
   boroughData.map(dataSet => {
-    if (mappedData.has(dataSet.vic_age_group)) {
-      mappedData.set(dataSet.vic_age_group, mappedData.get(dataSet.vic_age_group) as number + 1);
+    if (mappedDataOne.has(dataSet.vic_age_group)) {
+      mappedDataOne.set(dataSet.vic_age_group, mappedDataOne.get(dataSet.vic_age_group) as number + 1);
     } else {
-      mappedData.set(dataSet.vic_age_group, 1);
+      mappedDataOne.set(dataSet.vic_age_group, 1);
     }
   });
 
-  for (const [key, value] of mappedData) {
+  for (const [key, value] of mappedDataOne) {
     arr.push({ name: key, incidents: value });
   };
 
@@ -79,19 +79,19 @@ export const useRechartsDataMaker = (boroughData: Array<IncidentOccurrenceType>)
 
 export const useRechartsDataMakerMurder = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
 
-  const mappedData = new Map<string, number>();
+  const mappedDataOne = new Map<string, number>();
 
   const arr: DataIncidentType[] = [];
 
   boroughData.map(dataSet => {
-    if (mappedData.has(dataSet.statistical_murder_flag)) {
-      mappedData.set(dataSet.statistical_murder_flag, mappedData.get(dataSet.statistical_murder_flag) as number + 1);
+    if (mappedDataOne.has(dataSet.statistical_murder_flag)) {
+      mappedDataOne.set(dataSet.statistical_murder_flag, mappedDataOne.get(dataSet.statistical_murder_flag) as number + 1);
     } else {
-      mappedData.set(dataSet.statistical_murder_flag, 1);
+      mappedDataOne.set(dataSet.statistical_murder_flag, 1);
     }
   });
 
-  for (const [key, value] of mappedData) {
+  for (const [key, value] of mappedDataOne) {
     arr.push({ name: key, incidents: value });
   };
 
@@ -100,21 +100,31 @@ export const useRechartsDataMakerMurder = (boroughData: Array<IncidentOccurrence
 
 export const useRechartsDataMakerDemographics = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
 
-  const mappedData = new Map<string, number>();
+  const mappedDataOne = new Map<string, number>();
+  const mappedDataTwo = new Map<string, number>();
 
-  const arr: DataIncidentType[] = [];
+  const arrOne: DataIncidentType[] = [];
+  const arrTwo: DataIncidentType[] = [];
 
   boroughData.map(dataSet => {
-    if (mappedData.has(dataSet.statistical_murder_flag)) {
-      mappedData.set(dataSet.statistical_murder_flag, mappedData.get(dataSet.statistical_murder_flag) as number + 1);
+    if (mappedDataOne.has(dataSet.vic_race)) {
+      mappedDataOne.set(dataSet.vic_race, mappedDataOne.get(dataSet.vic_race) as number + 1);
     } else {
-      mappedData.set(dataSet.statistical_murder_flag, 1);
+      mappedDataOne.set(dataSet.vic_race, 1);
     }
   });
 
-  for (const [key, value] of mappedData) {
-    arr.push({ name: key, incidents: value });
+  boroughData.map(dataSet => {
+    if (mappedDataTwo.has(dataSet.perp_race)) {
+      mappedDataTwo.set(dataSet.perp_race, mappedDataTwo.get(dataSet.perp_race) as number + 1);
+    } else {
+      mappedDataTwo.set(dataSet.perp_race, 1);
+    }
+  });
+
+  for (const [key, value] of mappedDataOne) {
+    arrOne.push({ name: key, incidents: value });
   };
 
-  return arr;
+  return arrOne;
 };

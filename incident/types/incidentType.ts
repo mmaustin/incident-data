@@ -16,7 +16,7 @@ export type IncidentOccurrenceType = {
   "statistical_murder_flag": string,
   "perp_age_group"?: string,
   "perp_sex"?: string,
-  "perp_race"?: string,
+  "perp_race": string,
   "vic_age_group": string,
   "vic_sex": string,
   "vic_race": string,
