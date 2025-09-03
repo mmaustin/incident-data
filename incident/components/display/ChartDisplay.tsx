@@ -9,7 +9,7 @@ const ChartDisplay = ({borough}: {borough: boroughInput}) => {
 
   const boroughData = useUniversalData(borough, incidentArray);
   const dataArray = useRechartsDataMaker(boroughData);
-
+  
   return (
     <div className="h-[500px] w-full flex flex-col justify-center items-center">
       <ResponsiveContainer width='100%' height={300} className='mx-4'>
