@@ -98,7 +98,7 @@ export const useRechartsDataMakerMurder = (boroughData: Array<IncidentOccurrence
   return arr;
 };
 
-export const useRechartsDataMakerDemographics = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType> => {
+export const useRechartsDataMakerDemographics = (boroughData: Array<IncidentOccurrenceType>): Array<DataIncidentType[]> => {
 
   const mappedDataOne = new Map<string, number>();
   const mappedDataTwo = new Map<string, number>();
@@ -126,5 +126,9 @@ export const useRechartsDataMakerDemographics = (boroughData: Array<IncidentOccu
     arrOne.push({ name: key, incidents: value });
   };
 
-  return arrOne;
+  for (const [key, value] of mappedDataTwo) {
+    arrTwo.push({ name: key, incidents: value });
+  };
+  
+  return [arrOne, arrTwo];
 };
