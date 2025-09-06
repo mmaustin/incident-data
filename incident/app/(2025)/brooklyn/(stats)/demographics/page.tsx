@@ -1,17 +1,15 @@
-import BrooklynDemoDisplay from "@/components/BrooklynDemoDisplay";
-import { incidentData } from "@/utils/actions";
+import { useRechartsDataMakerDemographics, useUniversalData } from "@/appHooks/hooks";
+import incidentArray from "@/incidentData/incidentArray";
 
-//import { useData } from "@/providers/dataProvider";
+const BrooklynDemographics = () => {
 
-const BrooklynDemographics = async() => {
-
-  const data = await incidentData();
-  // const parsedData: object[] = JSON.parse(data);
-  //console.log(data);
+  const boroughData = useUniversalData("BROOKLYN", incidentArray);
+  const demographicsArray = useRechartsDataMakerDemographics(boroughData);
+  console.log(demographicsArray);
   
 
   return (
-    <BrooklynDemoDisplay dataString={data} />
+    <p></p>
   )
 }
 export default BrooklynDemographics;
