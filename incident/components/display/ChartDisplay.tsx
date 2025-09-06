@@ -9,6 +9,8 @@ const ChartDisplay = ({borough}: {borough: boroughInput}) => {
 
   const boroughData = useUniversalData(borough, incidentArray);
   const dataArray = useRechartsDataMaker(boroughData);
+  console.log(dataArray);
+  
   
   return (
     <div className="h-[500px] w-full flex flex-col justify-center items-center">
