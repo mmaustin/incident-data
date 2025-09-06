@@ -1,15 +1,9 @@
-import { useRechartsDataMakerDemographics, useUniversalData } from "@/appHooks/hooks";
-import incidentArray from "@/incidentData/incidentArray";
+import ChartDemographicsDisplay from "@/components/display/ChartDemographicsDisplay";
 
 const BrooklynDemographics = () => {
 
-  const boroughData = useUniversalData("BROOKLYN", incidentArray);
-  const demographicsArray = useRechartsDataMakerDemographics(boroughData);
-  console.log(demographicsArray);
-  
-
   return (
-    <p></p>
+    <ChartDemographicsDisplay borough={"BROOKLYN"} />
   )
 }
 export default BrooklynDemographics;
