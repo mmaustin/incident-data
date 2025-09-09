@@ -4,13 +4,33 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { boroughInput } from '@/types/boroughType';
 import { useRechartsDataMakerDemographics, useUniversalData } from "@/appHooks/hooks";
 
-const DemographicsAreaChart = ({borough}: {borough: boroughInput}) => {
+const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
 
   const boroughData = useUniversalData(borough, incidentArray);
-  const demographicsArray = useRechartsDataMakerDemographics(boroughData);
+  const data = useRechartsDataMakerDemographics(boroughData);
 
   return (
-    <div>DemographicsAreaChart</div>
+    <div className="h-[500px] w-full flex flex-col justify-center items-center">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          width={500}
+          height={400}
+          data={data[0]}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area type="monotone" dataKey="incidents" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
   )
 }
 export default DemographicsAreaChart;
