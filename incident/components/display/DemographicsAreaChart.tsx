@@ -10,7 +10,7 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
   const data = useRechartsDataMakerDemographics(boroughData);
 
   return (
-    <div className="h-[500px] w-full flex flex-col justify-center items-center">
+    <div className="h-[310px] w-[95%] flex flex-col justify-center items-center">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={500}
