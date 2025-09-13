@@ -10,10 +10,12 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
   const data = useRechartsDataMakerDemographics(boroughData);
 
   return (
-    <div className="h-full flex flex-wrap justify-center items-center mt-16">
+    <div className="h-full w-full flex flex-col justify-center items-center mt-24">
+      <p className='font-extrabold text-2xl'>Bronx Murder Demographics</p>
+      <div className="h-full w-full flex flex-wrap justify-center items-center mt-8">
 
       <div className="h-[210px] w-[45%] flex flex-col justify-center items-center ">
-        <p className="font-bold ">Victim Demographics</p>
+        <p className="font-bold">Victim Demographics</p>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             width={500}
@@ -27,7 +29,7 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
+            <XAxis dataKey="name" className='text-[6px] font-extrabold' />
             <YAxis />
             <Tooltip />
             <Area type="monotone" dataKey="incidents" stroke="#8884d8" fill="#8884d8" />
@@ -50,7 +52,7 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" className='text-[6px] font-extrabold'/>
           <YAxis />
           <Tooltip />
           <Area type="monotone" dataKey="incidents" stroke="#8884d8" fill="#8884d8" />
@@ -59,6 +61,8 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
       </div>
 
     </div>
+    </div>
+    
 
   )
 }
