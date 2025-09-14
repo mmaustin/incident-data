@@ -1,10 +1,9 @@
-
-
+import DemographicsAreaChart from "@/components/display/DemographicsAreaChart";
 
 
 const QueensDemographics = () => {
   return (
-    <div>QueensDemographics</div>
+    <DemographicsAreaChart borough={"QUEENS"} />
   )
 }
 export default QueensDemographics;
