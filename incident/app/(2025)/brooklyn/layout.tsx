@@ -15,7 +15,7 @@ const BrooklynLayout = ({children}: {children: ReactNode}) => {
 
   return (
     // <DataProvider promiseValue={d}>
-      <div className="bg-blue-200">
+      <div className="">
         {children}
       </div>
     // </DataProvider> 

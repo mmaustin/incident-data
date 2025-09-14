@@ -11,7 +11,7 @@ const DemographicsAreaChart = ({ borough }: { borough: boroughInput }) => {
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center mt-24">
-      <p className='font-extrabold text-2xl'>Bronx Murder Demographics</p>
+      <p className='font-extrabold text-2xl'>{borough} Demographics</p>
       <div className="h-full w-full flex flex-wrap justify-center items-center mt-8">
 
       <div className="h-[210px] w-[45%] flex flex-col justify-center items-center ">

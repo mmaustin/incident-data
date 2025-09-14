@@ -1,10 +1,9 @@
-
-import ChartDemographicsDisplay from "@/components/display/ChartDemographicsDisplay";
+import DemographicsAreaChart from "@/components/display/DemographicsAreaChart";
 
 const BrooklynDemographics = () => {
 
   return (
-    <ChartDemographicsDisplay borough={"BROOKLYN"} />
+    <DemographicsAreaChart borough={"BROOKLYN"} />
   )
 }
 export default BrooklynDemographics;
