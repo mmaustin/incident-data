@@ -132,3 +132,18 @@ export const useRechartsDataMakerDemographics = (boroughData: Array<IncidentOccu
   
   return [arrOne, arrTwo];
 };
+
+export const useEveryOdd = (sentence: string): Array<string> => {
+
+  const arr: Array<string> = [];
+  const splitSentence: Array<string> = sentence.split(" ");
+
+  for(let i = 0; i < splitSentence.length; i++){
+    if(i % 2 !== 0){
+      arr.push(splitSentence[i]);
+    };
+  }
+
+  return arr;
+
+}
