@@ -139,7 +139,7 @@ export const useEveryOdd = (sentence: string): Array<string> => {
   const splitSentence: Array<string> = sentence.split(" ");
 
   for(let i = 0; i < splitSentence.length; i++){
-    if(i % 2 !== 0){
+    if(i % 2 === 0){
       arr.push(splitSentence[i]);
     };
   }
